@@ -16,23 +16,15 @@ palindrome(risultato);
 // creiamo una funzione per capire se la parola inserita è palindroma
 function directionName(namePalindrome) {
 
-    var readingLeft;
-    for( var i = 0; i < namePalindrome.length; i++) {
-
-        readingLeft = namePalindrome[i];
-        console.log(readingLeft);
-
-    }
-
-    var readingRight;
+    var readingRight = '';
     for( var j = namePalindrome.length - 1; j >= 0; j--) {
-
-        readingRight = namePalindrome[j];
+        
+        readingRight += namePalindrome[j];
         console.log(readingRight);
     }
-    
+
     var isPalindroma = false;
-    if(readingLeft === readingRight) {
+    if(namePalindrome === readingRight) {
         isPalindroma = true;
     }
 
