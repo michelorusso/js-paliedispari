@@ -40,7 +40,7 @@ function isEvenOdd(evenOrOdd) {
 }
 
 var theWinner = isEvenOdd(sum);
-console.log(theWinner);
+console.log('La somma dei due numeri è: ', theWinner);
 
 // dichiariamo chi ha vinto
 if( choicePariDispari == theWinner) {
