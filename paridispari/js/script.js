@@ -39,11 +39,11 @@ function isEvenOdd(evenOrOdd) {
     return numberEvenOdd;
 }
 
-sum = isEvenOdd(sum);
-console.log(sum);
+var theWinner = isEvenOdd(sum);
+console.log(theWinner);
 
 // dichiariamo chi ha vinto
-if( choicePariDispari == sum) {
+if( choicePariDispari == theWinner) {
     alert('Hai vinto!');
 } else {
     alert('Hai perso!');
