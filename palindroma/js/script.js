@@ -9,33 +9,43 @@ console.log(username);
 
 document.getElementById('yourname').innerHTML = 'Il tuo nome è : ' + username;
 
-palindrome(username);
+var risultato = directionName(username);
 
-// document.getElementById('palindrome').innerHTML = 'Il tuo nome è : ' + username;
-
+palindrome(risultato);
 
 // creiamo una funzione per capire se la parola inserita è palindroma
-function palindrome(namePalindrome) {
+function directionName(namePalindrome) {
 
+    var readingLeft;
     for( var i = 0; i < namePalindrome.length; i++) {
 
-        var readingLeft = namePalindrome[i];
+        readingLeft = namePalindrome[i];
         console.log(readingLeft);
 
     }
 
+    var readingRight;
     for( var j = namePalindrome.length - 1; j >= 0; j--) {
 
-        var readingRight = namePalindrome[j];
+        readingRight = namePalindrome[j];
         console.log(readingRight);
     }
-
+    
+    var isPalindroma = false;
     if(readingLeft === readingRight) {
+        isPalindroma = true;
+    }
+
+    return isPalindroma;
+}
+
+
+function palindrome(result) {
+
+    if(result === true) {
         document.getElementById('palindrome').innerHTML = 'il tuo nome è palindromo';
     } else {
         document.getElementById('palindrome').innerHTML = 'il tuo nome non è palindromo';
     }
 
-    return namePalindrome;
 }
-
